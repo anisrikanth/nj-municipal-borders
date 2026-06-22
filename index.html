@@ -102,7 +102,7 @@
 
                 let preferredVoice = availableVoices.find(voice => voice.name.includes('Google US English'))
                                   || availableVoices.find(voice => voice.name.includes('Google') && voice.lang.includes('en-US'))
-                                  || availableVoices.find(voice => voice.name.includes('Samantha')) // Best iOS fallback
+                                  || availableVoices.find(voice => voice.name.includes('Samantha'))
                                   || availableVoices.find(voice => voice.lang === 'en-US');
                 
                 if (preferredVoice) {
@@ -166,7 +166,7 @@
                         townDisplay.innerText = "GPS Error/Denied";
                     },
                     {
-                        enableHighAccuracy: true, // Use the real GPS chip
+                        enableHighAccuracy: true,
                         maximumAge: 0,
                         timeout: 5000
                     }
